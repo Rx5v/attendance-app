@@ -6,7 +6,7 @@ const toggleSidebar = () => {
 };
 </script>
 <template>
-    <button @click="toggleSidebar" class="mt-4">
+    <button @click="toggleSidebar" class="w-fit">
         <ArrowLeftEndOnRectangleIcon class="h-6 w-6 text-white" />
     </button>
 </template>

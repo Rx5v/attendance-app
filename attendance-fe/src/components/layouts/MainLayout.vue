@@ -5,17 +5,19 @@ import Sidebar from '../template/AppSidebar.vue';
 import AppTopBar from '../template/AppTopBar.vue';
 const openSidebar = ref(true);
 const toggleSidebar = () => {
+    console.log('asd');
+
     openSidebar.value = !openSidebar.value;
 };
 </script>
 <template>
-    <div class="flex min-h-screen w-screen">
-        <Sidebar :isOpen="openSidebar" />
-        <div class="p-4 bg-dark1 w-full">
-            <AppTopBar @openSidebar="toggleSidebar" />
-            <div class="mt-4">
-                <slot></slot>
+    <div class="flex h-screen w-screen overflow-y-hidden">
+        <Sidebar :isOpen="openSidebar">
+            <div class="p-4 bg-dark1 w-full transition-all ease-in-out overflow-y-hidden">
+                <div class="mt-4 overflow-y-hidden h-full transition-all ease-in-out text-white">
+                    <slot />
+                </div>
             </div>
-        </div>
+        </Sidebar>
     </div>
 </template>

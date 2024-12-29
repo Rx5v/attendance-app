@@ -6,5 +6,7 @@ const openSidebar = () => {
 };
 </script>
 <template>
-    <SidebarToggle @open="openSidebar" />
+    <div class="w-full bg-dark1 px-4 py-2">
+        <SidebarToggle @open="openSidebar" />
+    </div>
 </template>

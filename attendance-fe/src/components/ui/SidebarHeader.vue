@@ -1,5 +1,10 @@
 <script setup>
 import { FingerPrintIcon } from '@heroicons/vue/24/outline';
+import SidebarToggle from '../ui/SidebarToggle.vue';
+const emit = defineEmits(['onOpen']);
+const toggleSidebar = () => {
+    emit('onOpen');
+};
 </script>
 <template>
     <div class="flex justify-between items-center">
@@ -9,5 +14,7 @@ import { FingerPrintIcon } from '@heroicons/vue/24/outline';
             </div>
             <p class="text-xl font-medium">Click!</p>
         </div>
+
+        <SidebarToggle @open="toggleSidebar" class="md:hidden" />
     </div>
 </template>
