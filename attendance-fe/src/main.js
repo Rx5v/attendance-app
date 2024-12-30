@@ -13,14 +13,10 @@ import VueCameraLib from 'vue-camera-lib'
 
 library.add(faStopwatch, faClock, faPencil, faTableColumns, faUser, faArrowUpRightFromSquare)
 
-const router = createRouter({
-  history: createWebHashHistory(),
-  routes,
-});
 
 const app = createApp(App);
 
-app.use(router);
+app.use(routes);
 app.use(VueCameraLib)
 app.component('font-awesome-icon', FontAwesomeIcon);
 app.mount("#app");

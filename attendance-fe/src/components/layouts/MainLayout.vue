@@ -1,14 +1,7 @@
 <script setup>
 import { ref } from 'vue';
-import { ArrowLeftEndOnRectangleIcon } from '@heroicons/vue/24/outline';
 import Sidebar from '../template/AppSidebar.vue';
-import AppTopBar from '../template/AppTopBar.vue';
 const openSidebar = ref(true);
-const toggleSidebar = () => {
-    console.log('asd');
-
-    openSidebar.value = !openSidebar.value;
-};
 </script>
 <template>
     <div class="flex h-screen w-screen overflow-y-hidden">

@@ -5,22 +5,31 @@ import MyCam from '../components/MyCam.vue';
 import DateTimeCounter from '../components/ui/DateTimeCounter.vue';
 import { useGeolocation } from '@vueuse/core';
 
-const { coords, locatedAt, error, resume, pause } = useGeolocation();
+const { coords, locatedAt, error, resume, pause } = useGeolocation({
+    enableHighAccuracy: true,
+    timeout: 10000, // Timeout after 10 seconds
+    maximumAge: 0 // Ensure fresh data);
+});
 const latitude = ref('');
 const longitude = ref('');
 const takePhoto = ref(false);
 const photo = ref();
+
+// Handle take photos
 const onPhotoTaken = (data) => {
-    console.log(data);
     photo.value = data.image_data_url;
     takePhoto.value = false;
 };
 
+// Open camera
 const toggleTakePhoto = () => {
     takePhoto.value = !takePhoto.value;
 };
 
+// watch coordinate
 watch(coords, (val) => {
+    console.log(val);
+
     latitude.value = val.latitude;
     longitude.value = val.longitude;
 });

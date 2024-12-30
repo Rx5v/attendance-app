@@ -11,7 +11,6 @@ const props = defineProps({
 });
 const getIcon = (val) => {
     const arr = val.split(' ');
-    console.log(arr);
     return arr;
 };
 </script>

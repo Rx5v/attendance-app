@@ -13,16 +13,11 @@ const props = defineProps({
     }
 });
 
-const open = ref(true);
-watch(props.isOpen, (newVal, oldVal) => {
-    console.log(newVal);
-    console.log(oldVal);
-
+const open = ref(props.isOpen);
+watch(open, (newVal, oldVal) => {
     open.value = newVal;
 });
 const onOpen = () => {
-    console.log('asd');
-
     open.value = !open.value;
 };
 const menu = ref([

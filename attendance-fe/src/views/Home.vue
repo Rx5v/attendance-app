@@ -114,7 +114,7 @@ const toggleModal = () => {
                             </div>
                         </div>
                         <div class="flex flex-col gap-6 px-6 py-6 w-full bg-dark3 rounded-lg cursor-pointer">
-                            <button class="m-auto" @click="toggleModal">
+                            <button class="m-auto" @click="window.location('/absence')">
                                 <div class="m-auto flex flex-col items-center gap-4">
                                     <div class="p-3 bg-dark4 rounded-full w-fit">
                                         <ArrowDownOnSquareIcon class="h-10 w-10" />

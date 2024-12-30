@@ -3,9 +3,9 @@ import swaggerJSDoc from 'swagger-jsdoc';
 const swaggerDefinition = {
     openapi: '3.0.0',
     info: {
-      title: 'My API',
+      title: 'ATTENDANCE APP API',
       version: '1.0.0',
-      description: 'My API Description',
+      description: 'Attendance API',
     },
     components: {
       securitySchemes: {
